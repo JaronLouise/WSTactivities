@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word and Sentence Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Word and Sentence Counter</h2>
+    
+    <textarea 
+      id="textInput" 
+      placeholder="Enter your text here..."
+    ></textarea>
+
+    <div class="stats-container">
+      <div class="stat-box">
+        <div class="stat-label">Words</div>
+        <div id="wordCount" class="stat-value">0</div>
+      </div>
+      
+      <div class="stat-box">
+        <div class="stat-label">Sentences</div>
+        <div id="sentenceCount" class="stat-value">0</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
