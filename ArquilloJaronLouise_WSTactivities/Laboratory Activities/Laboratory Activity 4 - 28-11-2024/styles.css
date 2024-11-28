@@ -1,0 +1,212 @@
+:root {
+    --bg-color: #0a0a1a;
+    --border-color: #00ff66;
+    --text-color: #ffffff;
+    --highlight-color: #ffff00;
+    --zone-bg: rgba(10, 10, 26, 0.9);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Orbitron', 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+#gameContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 20px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+
+
+#welcome-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 3rem;
+    z-index: 100;
+    transition: opacity 1s ease, transform 1s ease;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+#player {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url("assets/player.gif");
+    background-size: cover;
+    z-index: 10;
+    transition: all 0.1s;
+}
+
+#tutorial-tooltip {
+    position: absolute;
+    background-color: rgba(0, 255, 102, 0.2);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#alien-message {
+    position: absolute;
+    color: var(--text-color);
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.info-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    border: 3px solid var(--border-color);
+    background-color: var(--zone-bg);
+    padding: 15px;
+    border-radius: 15px;
+    opacity: 0; 
+    transition: all 0.3s ease;
+    max-width: 250px; 
+    max-height: 200px; 
+    text-align: center;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.info-zone h2 {
+    color: var(--highlight-color);
+    margin-bottom: 8px; 
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+    font-size: 1.2rem; 
+}
+
+.info-zone p, .info-zone ul {
+    color: var(--text-color);
+    font-size: 0.9rem; 
+    line-height: 1.4;
+}
+
+
+#about-zone { 
+    grid-area: 1 / 1; 
+}
+
+#skills-zone { 
+    grid-area: 1 / 2; 
+}
+
+#projects-zone { 
+    grid-area: 2 / 1; 
+}
+
+#contact-zone { 
+    grid-area: 2 / 2;
+}
+
+
+.planet {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: spin 10s infinite linear, scale 4s infinite alternate, move 20s infinite linear;
+}
+
+/* Planet Colors */
+.planet1 {
+    background-color: #ff5733; 
+}
+
+.planet2 {
+    background-color: #33ccff;
+}
+
+.planet3 {
+    background-color: #66ff66; /* Green */
+}
+
+/* Spinning animation for the planets */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pulsing effect for planet size */
+@keyframes scale {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Slow movement effect for planets (horizontal and vertical) */
+@keyframes move {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(10%) translateY(-5%); }
+    50% { transform: translateX(-10%) translateY(10%); }
+    75% { transform: translateX(5%) translateY(-10%); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+@media (max-width: 768px) {
+    #gameContainer {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+        gap: 15px; 
+    }
+
+    .info-zone {
+        max-width: 90%; 
+    }
+}
