@@ -1,5 +1,5 @@
 <div align="center">
-   <img src="https://ibb.co/prZL2NS" width="150px" alt="Project Logo" />
+   <img src="https://i.ibb.co/FqJD6cF/Untitled-design-9.gif" alt="Untitled-design-9" border="0"></a>
    <h1>Web Systems and Technologies Activities</h1>
    
    ![GitHub last commit](https://img.shields.io/github/last-commit/JaronLouise/WSTactivities)
