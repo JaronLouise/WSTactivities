@@ -1,5 +1,5 @@
 <div align="center">
-   <img src="https://readmemaker.com/static/media/logo.95b37b622ac102be3dec.png" width="150px" alt="Project Logo" />
+   <img src="[https://readmemaker.com/static/media/logo.95b37b622ac102be3dec.png](https://ibb.co/prZL2NS)" width="150px" alt="Project Logo" />
    <h1>Web Systems and Technologies Activities</h1>
    
    ![GitHub last commit](https://img.shields.io/github/last-commit/JaronLouise/WSTactivities)
