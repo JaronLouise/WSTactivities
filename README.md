@@ -54,7 +54,7 @@ Here's a guide to the essential files and directories in our project:
 ## ✨ Acknowledgements
 <div align="center">
    
-   ### **Ma'am Fatima Marie Agdon**
+   ### **🌸Ma'am Fatima Marie Agdon:🌸**
    
    *Thank you for your guidance throughout the semester!*
    
